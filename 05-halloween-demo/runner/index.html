@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halloween Runner — la course du fantôme</title>
+  <meta name="description" content="Recreation du Chrome Dino Game en theme Halloween : fantôme ou sorcière, citrouilles et chauves-souris. Reverse engineering REA de dinosaur.game." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎃</text></svg>" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>🎃 Halloween Runner</h1>
+    <div class="char-select" role="group" aria-label="Personnage">
+      <button class="char-btn" data-char="ghost">👻 Fantôme</button>
+      <button class="char-btn" data-char="witch">🧙 Sorcière</button>
+    </div>
+    <button id="sound" aria-label="Couper le son">🔊</button>
+  </header>
+
+  <main class="stage">
+    <div class="scorebar">
+      <span class="hiscore">🏆 HI <span id="hiscore">00000</span></span>
+      <span class="score"><span id="score">00000</span></span>
+    </div>
+
+    <div class="frame">
+      <canvas id="game" width="600" height="170" aria-label="Jeu Halloween Runner"></canvas>
+      <div id="gameover" class="overlay">
+        <div class="panel">
+          <h2>GAME OVER</h2>
+          <p>Score : <strong id="final-score">00000</strong></p>
+          <p>Record : <strong id="best-score">00000</strong></p>
+          <button id="restart">Rejouer (Espace)</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="touch-controls">
+      <button id="touch-jump" aria-label="Sauter">⬆ Sauter</button>
+      <button id="touch-duck" aria-label="Baisser">⬇ Baisser</button>
+    </div>
+
+    <footer class="legend">
+      <p><kbd>Espace</kbd> / <kbd>⬆</kbd> sauter — <strong>maintenir en l'air pour flotter</strong> · <kbd>⬇</kbd> baisser / descendre vite · <kbd>M</kbd> son</p>
+      <p class="credits">Mécanique recréée d'après le Chrome T-Rex Runner — reverse engineering REA de dinosaur.game (chunk <code>809.js</code>).</p>
+    </footer>
+  </main>
+
+  <script src="js/sprites.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>

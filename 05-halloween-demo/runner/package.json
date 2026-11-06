@@ -1,0 +1,10 @@
+{
+  "name": "halloween-runner",
+  "version": "1.0.0",
+  "description": "Recreation du Chrome Dino Game (reverse engineering REA de dinosaur.game) en theme Halloween : fantôme ou sorcière, citrouilles, chauves-souris.",
+  "private": true,
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs"
+  }
+}
