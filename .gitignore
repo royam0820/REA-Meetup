@@ -10,3 +10,7 @@ verdict/
 
 # Références privées de la démo (hors arène agent).
 /.verity/
+
+# Non publiés sur GitHub
+/output/
+/web/
