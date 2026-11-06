@@ -6,3 +6,7 @@
 04-halloween-demo/
 tools/
 __pycache__/
+verdict/
+
+# Références privées de la démo (hors arène agent).
+/.verity/
